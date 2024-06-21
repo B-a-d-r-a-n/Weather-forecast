@@ -136,13 +136,13 @@ function displayCurr(x) {
                   <div class="details">
                     <span class="me-4"
                       ><img
-                        src="images/icon-umberella.png"
+                        src="/images/icon-umberella.png"
                         class="img-fluid me-1"
                         alt="Humidity"
                       />${x.current.humidity}%</span
                     ><span class="me-4"
                       ><img
-                        src="images/icon-wind.png"
+                        src="/images/icon-wind.png"
                         class="img-fluid me-1"
                         alt="Wind speed"
                       />${x.current.wind_kph}km/h</span
@@ -150,7 +150,7 @@ function displayCurr(x) {
   if (x.current.wind_dir == "W") {
     currWeather.lastElementChild.lastElementChild.lastElementChild.innerHTML += `<span class="me-4"
                       ><img
-                        src="images/icon-compass.png"
+                        src="/images/icon-compass.png"
                         class="img-fluid me-1"
                         alt="wind direction"
                       />West</span
@@ -161,7 +161,7 @@ function displayCurr(x) {
   } else if (x.current.wind_dir == "E") {
     currWeather.lastElementChild.lastElementChild.lastElementChild.innerHTML += `<span class="me-4"
                       ><img
-                        src="images/icon-compass.png"
+                        src="/images/icon-compass.png"
                         class="img-fluid me-1"
                         alt="wind direction"
                       />East</span
@@ -172,7 +172,7 @@ function displayCurr(x) {
   } else if (x.current.wind_dir == "N") {
     currWeather.lastElementChild.lastElementChild.lastElementChild.innerHTML += `<span class="me-4"
                       ><img
-                        src="images/icon-compass.png"
+                        src="/images/icon-compass.png"
                         class="img-fluid me-1"
                         alt="wind direction"
                       />North</span
@@ -183,7 +183,7 @@ function displayCurr(x) {
   } else if (x.current.wind_dir == "S") {
     currWeather.lastElementChild.lastElementChild.lastElementChild.innerHTML += `<span class="me-4"
                       ><img
-                        src="images/icon-compass.png"
+                        src="/images/icon-compass.png"
                         class="img-fluid me-1"
                         alt="wind direction"
                       />South</span
@@ -194,7 +194,7 @@ function displayCurr(x) {
   } else if (x.current.wind_dir == "NE") {
     currWeather.lastElementChild.lastElementChild.lastElementChild.innerHTML += `<span class="me-4"
                       ><img
-                        src="images/icon-compass.png"
+                        src="/images/icon-compass.png"
                         class="img-fluid me-1"
                         alt="wind direction"
                       />North-East</span
@@ -205,7 +205,7 @@ function displayCurr(x) {
   } else if (x.current.wind_dir == "NW") {
     currWeather.lastElementChild.lastElementChild.lastElementChild.innerHTML += `<span class="me-4"
                       ><img
-                        src="images/icon-compass.png"
+                        src="/images/icon-compass.png"
                         class="img-fluid me-1"
                         alt="wind direction"
                       />North-West</span
@@ -216,7 +216,7 @@ function displayCurr(x) {
   } else if (x.current.wind_dir == "SW") {
     currWeather.lastElementChild.lastElementChild.lastElementChild.innerHTML += `<span class="me-4"
                       ><img
-                        src="images/icon-compass.png"
+                        src="/images/icon-compass.png"
                         class="img-fluid me-1"
                         alt="wind direction"
                       />South-West</span
@@ -227,7 +227,7 @@ function displayCurr(x) {
   } else if (x.current.wind_dir == "SE") {
     currWeather.lastElementChild.lastElementChild.lastElementChild.innerHTML += `<span class="me-4"
                       ><img
-                        src="images/icon-compass.png"
+                        src="/images/icon-compass.png"
                         class="img-fluid me-1"
                         alt="wind direction"
                       />South-East</span
@@ -238,7 +238,7 @@ function displayCurr(x) {
   } else {
     currWeather.lastElementChild.lastElementChild.lastElementChild.innerHTML += `<span class="me-4"
                       ><img
-                        src="images/icon-compass.png"
+                        src="/images/icon-compass.png"
                         class="img-fluid me-1"
                         alt="Wind direction"
                       />East</span
