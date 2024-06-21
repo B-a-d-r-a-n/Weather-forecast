@@ -1,0 +1,178 @@
+body{
+  font-family: Roboto, open-sans, sans-serif;
+  background-color: #1E202B;
+  color: white ;
+}
+h1,h2,li a{
+  color: white !important;
+}
+input{
+  color: white !important ;
+  background-color: #1e202b !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+h1{
+   color: rgb(23, 162, 184, 1);
+}
+::placeholder{
+  color: #ced4da !important;
+}
+.weather{
+  background-image: url(../Images/banner.png);
+  background-repeat: no-repeat;
+
+}
+.nav-link.active{
+  border: 2px solid #009ad8 !important;
+ color: #009ad8 !important;
+}
+.nav-link{
+  border: 2px solid transparent !important;
+  transition: all 0.2s !important;
+}
+.nav-link:hover{
+  border: 2px solid #009ad8 !important;
+  color: #009ad8 !important;
+}
+.card-header{
+  border-bottom-left-radius: 0 !important
+}
+/* .Weather-cards,.input-group{
+  width: 90%;
+} */
+.curr-weather-header{
+  background-color: #2D303D;
+}
+.daTom-weather-header{
+  background-color: #242630;
+}
+.tom-weather-header{
+  background-color: #222530;
+}
+.curr-weather,.daTom-weather{
+  background-color: #323544;
+}
+.tom-weather{
+  background-color: #262936;
+}
+.card{
+  color: rgb(191, 193, 200)
+  !important;
+}
+#searchBtn{
+  position: absolute;
+  right: 20px;
+  bottom: 8px;
+z-index: 9999999999999999999999;
+background-color: #009ad8;
+color: white;
+padding: 8px 40px !important;
+
+}
+#emailBtn{
+  position: absolute;
+  right: 7px;
+  bottom: 8px;
+z-index: 9999999999999999999999;
+background-color: #009ad8;
+color: white;
+padding: 8px 40px !important;
+}
+.social-btn{
+  width: 40px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 50%;
+    background: #1E202B;
+    color: #009ad8;
+    text-align: center;
+    line-height: 2;
+    transition: 0.3s ease;
+    font-size: 20px;
+    text-decoration: none;
+}
+.footer{
+  background-color: #262936;
+}
+.social-btn:hover{
+  color: #E8E6E3;
+  background: #007BAD;
+}
+
+.fut-deg{
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+}
+.curr-deg{
+  font-size: 88px;
+  font-weight: 700;
+}
+.status{
+  color: #009ad8;
+  margin: 20px 0px !important;
+}
+.title-site{
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+.card{
+  height: 413px;
+}
+.loader {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 6rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  animation: pulsOut 1.8s ease-in-out infinite;
+  filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 0.75));
+}
+.loader:before {
+  width: 100%;
+  padding-bottom: 100%;
+  box-shadow: inset 0 0 0 1rem #fff;
+  animation-name: pulsIn;
+}
+.loader:after {
+  width: calc(100% - 2rem);
+  padding-bottom: calc(100% - 2rem);
+  box-shadow: 0 0 0 0 #fff;
+}
+
+@keyframes pulsIn {
+  0% {
+    box-shadow: inset 0 0 0 1rem #fff;
+    opacity: 1;
+  }
+  50%, 100% {
+    box-shadow: inset 0 0 0 0 #fff;
+    opacity: 0;
+  }
+}
+
+@keyframes pulsOut {
+  0%, 50% {
+    box-shadow: 0 0 0 0 #fff;
+    opacity: 0;
+  }
+  100% {
+    box-shadow: 0 0 0 1rem #fff;
+    opacity: 1;
+  }
+}
+    
