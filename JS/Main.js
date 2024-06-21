@@ -4,16 +4,19 @@ var forecastDaTomWeather = document.querySelector(".daTom-weather");
 var weatherSearchInp = document.getElementById("weatherSearchInp");
 var searchBtn = document.getElementById("searchBtn");
 var searchAlert = document.querySelector(".alert.text-center");
-var home;
+var home = "cairo";
 
-if ("geolocation" in navigator) {
-  navigator.geolocation.getCurrentPosition(
-    geolocationSuccess,
-    geolocationError
-  );
-} else {
-  console.log("Geolocation is not available in this browser.");
-}
+(function () {
+  if ("geolocation" in navigator) {
+    navigator.geolocation.getCurrentPosition(
+      geolocationSuccess,
+      geolocationError
+    );
+  } else {
+    console.log("Geolocation is not available in this browser.");
+  }
+})();
+
 async function geolocationSuccess(position) {
   try {
     var latitude = position.coords.latitude;
@@ -66,11 +69,15 @@ async function weather(city) {
 
 weatherSearchInp.addEventListener("keyup", function (e) {
   var x = e.target.value;
-  weatherSearch(x);
+  if (x.length >= 3) {
+    weatherSearch(x);
+  } else weatherSearch(home);
 });
 searchBtn.addEventListener("click", function (e) {
   var x = weatherSearchInp.value;
-  weatherSearch(x);
+  if (x.length >= 3) {
+    weatherSearch(x);
+  } else weatherSearch(home);
 });
 
 var days = [
