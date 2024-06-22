@@ -13,6 +13,7 @@ var home = "cairo";
       geolocationError
     );
   } else {
+    weatherSearch(home);
     console.log("Geolocation is not available in this browser.");
   }
 })();
@@ -33,6 +34,7 @@ async function geolocationSuccess(position) {
 }
 
 function geolocationError(error) {
+  weatherSearch(home);
   console.error("Error getting geolocation:", error);
 }
 
