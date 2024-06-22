@@ -29,6 +29,7 @@ async function geolocationSuccess(position) {
     home = x.address.city;
     weatherSearch(home);
   } catch (error) {
+    weatherSearch(home);
     console.log(error);
   }
 }
@@ -53,6 +54,7 @@ async function weatherSearch(city) {
       weather(searchResult);
     }
   } catch (error) {
+    displayError();
     console.log(error);
   }
 }
@@ -65,6 +67,7 @@ async function weather(city) {
     var x = await url.json();
     displayCurr(x);
   } catch (error) {
+    displayError();
     console.log(error);
   }
 }
@@ -115,6 +118,35 @@ var months = [
 //     " " +
 //     now.getFullYear()
 // ); //Tuesday February 12 2013
+function displayError() {
+  currWeather.innerHTML = `              <div
+                class="d-flex justify-content-center align-items-center h-100"
+              >
+                <div class="alert alert-danger text-c" role="alert">
+                  <strong
+                    >We're Having some trouble connecting to the servers</strong
+                  >
+                </div>
+              </div>`;
+  forecastTomWeather.innerHTML = `              <div
+                class="d-flex justify-content-center align-items-center h-100"
+              >
+                <div class="alert alert-danger text-c" role="alert">
+                  <strong
+                    >We're Having some trouble connecting to the servers</strong
+                  >
+                </div>
+              </div>`;
+  forecastDaTomWeather.innerHTML = `              <div
+                class="d-flex justify-content-center align-items-center h-100"
+              >
+                <div class="alert alert-danger text-c" role="alert">
+                  <strong
+                    >We're Having some trouble connecting to the servers</strong
+                  >
+                </div>
+              </div>`;
+}
 
 function displayCurr(x) {
   var now = new Date(`${x.forecast.forecastday[0].date}`);
